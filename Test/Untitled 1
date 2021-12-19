@@ -1,0 +1,55 @@
+import java.util.Iterator;
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+		String[] txt = new String[4];
+		long seRagham = 0, doRagham = 0, raghamSadgan = 0, raghamYekan = 0;
+		int i = 0;
+		String[][] Horof = {
+				{ "", "Yek ", "Do ", "Se ", "Chahar ", "Panj ", "Shesh ", "Haft ", "Hasht ", "Noh ", "Dah ", "YazDah ",
+						"DavazDah", "SizDah ", "ChaharDah ", "PanzDah ", "ShanzDah ", "HefDah ", "HejDah ", "NozDah " },
+				{ "", "Dah", "Bist", "Si", "Chehl", "Panjah", "Shast", "Haftad", "Hashtad", "Navad" },
+				{ "", "Sad", "Divist", "SiSad", "ChaharSad", "PanSad", "SheshSad", "HaftSad", "HashtSad", "NohSad" } };
+		System.out.print("Please Enter a Number :");
+		long num = new Scanner(System.in).nextLong();
+		while (num != 0) {
+			seRagham = num % 1000;
+			num /= 1000;
+			doRagham = seRagham % 100;
+			raghamSadgan = seRagham / 100;
+			if (doRagham < 20) {
+				txt[i] = (Horof[2][(int) raghamSadgan] + " " + Horof[0][(int) doRagham]);
+				i++;
+
+			} else {
+				raghamYekan = doRagham % 10;
+				doRagham /= 10;
+				txt[i] = (Horof[2][(int) raghamSadgan] + " " + Horof[1][(int) doRagham] + " "
+						+ Horof[0][(int) raghamYekan]);
+				i++;
+
+			}
+		}
+		for (int j = i - 1; j >= 0; j--) {
+			System.out.print(txt[j] + fncHrof(j));
+
+		}
+
+	}
+
+	private static String fncHrof(int i) {
+		switch (i) {
+		case 3:
+			return " Miliard ";
+		case 2:
+			return " Milion ";
+		case 1:
+			return " Hezar ";
+		default:
+			return "";
+		}
+	}
+
+}
