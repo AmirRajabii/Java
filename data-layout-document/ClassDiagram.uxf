@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="13.3">
+  <zoom_level>12</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>108</x>
+      <y>540</y>
+      <w>324</w>
+      <h>132</h>
+    </coordinates>
+    <panel_attributes>RelUserPage
+--
+-user: User
+-name: String
+-creationDate: long
+-page:Page
+
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>552</x>
+      <y>588</y>
+      <w>120</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>User</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>492</x>
+      <y>192</y>
+      <w>288</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>CardTemplate
+--
+-height: int
+-width: int
+-background: byte[]
+
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1068</x>
+      <y>336</y>
+      <w>204</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>TextElement
+--
+-font:FontInfo
+-maxWidth: int
+-textValue:String
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>948</x>
+      <y>240</y>
+      <w>240</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;50.0;180.0;50.0;180.0;80.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>852</x>
+      <y>336</y>
+      <w>192</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>ImageElement
+--
+-image: byte[]
+-height: int
+-width: int
+-imageID: String
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>936</x>
+      <y>240</y>
+      <w>48</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>20.0;10.0;20.0;50.0;10.0;50.0;10.0;80.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1200</x>
+      <y>204</y>
+      <w>60</w>
+      <h>156</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=1
+m2=1..n</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;110.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1104</x>
+      <y>96</y>
+      <w>192</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>FontInfo
+--
+-fontName: String
+-fontSize: Sting
+-fontColor: String
+-font: byte[]
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>876</x>
+      <y>156</y>
+      <w>192</w>
+      <h>96</h>
+    </coordinates>
+    <panel_attributes>Element
+--
+-xLocation: int
+-yLocation: int
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>492</x>
+      <y>84</y>
+      <w>288</w>
+      <h>96</h>
+    </coordinates>
+    <panel_attributes>RelCardTemplateElement
+--
+-cardTemplate: CardTemplate
+-elements: List&lt;Element&gt;
+-side: EnumSide</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>768</x>
+      <y>84</y>
+      <w>228</w>
+      <h>96</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=1
+m2=1..n</panel_attributes>
+    <additional_attributes>170.0;60.0;170.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>768</x>
+      <y>144</y>
+      <w>108</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=1
+m2=1..n</panel_attributes>
+    <additional_attributes>10.0;70.0;70.0;70.0;70.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>492</x>
+      <y>336</y>
+      <w>300</w>
+      <h>228</h>
+    </coordinates>
+    <panel_attributes>Page
+--
+-height: int
+-width: int
+-paddingBottom: int
+-paddingLeft: int
+-paddingTop: int
+-paddingRight: int
+-rowCount: int
+-columnCount: int
+-enumPageType: EnumPageType
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>156</x>
+      <y>84</y>
+      <w>192</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>EnumSide
+--
+BACK,FRONT</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>420</x>
+      <y>600</y>
+      <w>156</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=1
+m2=0..n
+</panel_attributes>
+    <additional_attributes>110.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>96</x>
+      <y>264</y>
+      <w>372</w>
+      <h>96</h>
+    </coordinates>
+    <panel_attributes>RelPageCardTemplate
+--
+-cardTemplate: RelCardTemplateElement
+-page: Page</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>336</x>
+      <y>84</y>
+      <w>180</w>
+      <h>48</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=1
+m2=1..n</panel_attributes>
+    <additional_attributes>10.0;10.0;130.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>288</x>
+      <y>144</y>
+      <w>228</w>
+      <h>144</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=1
+m2=1
+</panel_attributes>
+    <additional_attributes>170.0;20.0;10.0;20.0;10.0;100.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>288</x>
+      <y>348</y>
+      <w>228</w>
+      <h>108</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=1
+m2=1..n
+</panel_attributes>
+    <additional_attributes>170.0;60.0;10.0;60.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>288</x>
+      <y>444</y>
+      <w>228</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=1
+m2=1
+</panel_attributes>
+    <additional_attributes>170.0;20.0;10.0;20.0;10.0;80.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>864</x>
+      <y>504</y>
+      <w>192</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>EnumPageType
+--
+SINGLE,BOOK,BOTH</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>780</x>
+      <y>468</y>
+      <w>192</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=1..n
+m2=1</panel_attributes>
+    <additional_attributes>10.0;10.0;140.0;10.0;140.0;30.0</additional_attributes>
+  </element>
+</diagram>
